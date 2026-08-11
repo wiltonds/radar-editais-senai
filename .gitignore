@@ -1,0 +1,18 @@
+# Dados sensiveis e locais - NUNCA publicar
+dados/
+*.xlsx
+*.xls
+*.csv
+editais.json
+briefing*.html
+emb_*.npy
+catalogo_indexado.json
+
+# Cache do Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Modelo de embeddings (baixado localmente)
+.cache/

@@ -1,0 +1,7 @@
+langgraph
+openai
+sentence-transformers
+pandas
+openpyxl
+requests
+numpy
