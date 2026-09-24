@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<rect width="1400" height="760" fill="#0b1020"/>
+<text x="70" y="72" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Radar de Editais — AI Commercial Intelligence</text>
+<text x="70" y="110" fill="#aeb8cc" font-family="Arial, sans-serif" font-size="18">From public procurement data to auditable commercial opportunities</text>
+
+<g font-family="Arial, sans-serif">
+  <rect x="70" y="170" width="230" height="110" rx="16" fill="#17213a" stroke="#5b8def" stroke-width="2"/>
+  <text x="185" y="208" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">PNCP</text>
+  <text x="185" y="238" text-anchor="middle" fill="#b9c4d8" font-size="16">Public notices</text>
+  <text x="185" y="262" text-anchor="middle" fill="#b9c4d8" font-size="16">Awarded contracts</text>
+
+  <rect x="390" y="150" width="250" height="150" rx="16" fill="#17213a" stroke="#63b3ed" stroke-width="2"/>
+  <text x="515" y="190" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">Classification</text>
+  <text x="515" y="222" text-anchor="middle" fill="#b9c4d8" font-size="15">Rules + local LLM</text>
+  <text x="515" y="250" text-anchor="middle" fill="#b9c4d8" font-size="15">Category triage</text>
+  <text x="515" y="278" text-anchor="middle" fill="#b9c4d8" font-size="15">Evidence filtering</text>
+
+  <rect x="730" y="150" width="270" height="150" rx="16" fill="#17213a" stroke="#7dd3fc" stroke-width="2"/>
+  <text x="865" y="190" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">Semantic Retrieval</text>
+  <text x="865" y="222" text-anchor="middle" fill="#b9c4d8" font-size="15">Sentence Transformers</text>
+  <text x="865" y="250" text-anchor="middle" fill="#b9c4d8" font-size="15">Portfolio / service match</text>
+  <text x="865" y="278" text-anchor="middle" fill="#b9c4d8" font-size="15">RAG context</text>
+
+  <rect x="1060" y="150" width="270" height="150" rx="16" fill="#17213a" stroke="#a78bfa" stroke-width="2"/>
+  <text x="1195" y="190" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">AI Reasoning</text>
+  <text x="1195" y="222" text-anchor="middle" fill="#b9c4d8" font-size="15">LM Studio / local LLM</text>
+  <text x="1195" y="250" text-anchor="middle" fill="#b9c4d8" font-size="15">Contextual interpretation</text>
+  <text x="1195" y="278" text-anchor="middle" fill="#b9c4d8" font-size="15">Evidence-grounded output</text>
+
+  <rect x="250" y="430" width="270" height="145" rx="16" fill="#17213a" stroke="#34d399" stroke-width="2"/>
+  <text x="385" y="470" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">CNPJ Enrichment</text>
+  <text x="385" y="502" text-anchor="middle" fill="#b9c4d8" font-size="15">Winner identification</text>
+  <text x="385" y="530" text-anchor="middle" fill="#b9c4d8" font-size="15">Company context</text>
+  <text x="385" y="558" text-anchor="middle" fill="#b9c4d8" font-size="15">Commercial evidence</text>
+
+  <rect x="565" y="430" width="270" height="145" rx="16" fill="#17213a" stroke="#34d399" stroke-width="2"/>
+  <text x="700" y="470" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">Prioritization</text>
+  <text x="700" y="502" text-anchor="middle" fill="#b9c4d8" font-size="15">Opportunity scoring</text>
+  <text x="700" y="530" text-anchor="middle" fill="#b9c4d8" font-size="15">Compete · Monitor · Prospect</text>
+  <text x="700" y="558" text-anchor="middle" fill="#b9c4d8" font-size="15">Human decision support</text>
+
+  <rect x="880" y="430" width="270" height="145" rx="16" fill="#17213a" stroke="#fbbf24" stroke-width="2"/>
+  <text x="1015" y="470" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">Commercial Briefing</text>
+  <text x="1015" y="502" text-anchor="middle" fill="#b9c4d8" font-size="15">Prioritized opportunities</text>
+  <text x="1015" y="530" text-anchor="middle" fill="#b9c4d8" font-size="15">Context + evidence</text>
+  <text x="1015" y="558" text-anchor="middle" fill="#b9c4d8" font-size="15">HTML output</text>
+</g>
+
+<g stroke="#7f8aa3" stroke-width="3" fill="none" marker-end="url(#arrow)">
+<path d="M300 225 H390"/>
+<path d="M640 225 H730"/>
+<path d="M1000 225 H1060"/>
+<path d="M1195 300 V365 H385 V430"/>
+<path d="M520 502 H565"/>
+<path d="M835 502 H880"/>
+</g>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#7f8aa3"/></marker></defs>
+
+<text x="70" y="670" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Design principle</text>
+<text x="70" y="704" fill="#aeb8cc" font-family="Arial, sans-serif" font-size="18">Evidence → Retrieval → AI reasoning → Validation → Prioritization → Decision support</text>
+<text x="70" y="735" fill="#77839b" font-family="Arial, sans-serif" font-size="15">Portfolio architecture — public data and code only; sensitive production datasets remain outside the repository.</text>
+</svg>
