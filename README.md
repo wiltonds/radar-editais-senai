@@ -1,43 +1,142 @@
-# Radar de Editais — Inteligência Comercial com IA Local
+# Radar de Editais — Public Procurement Intelligence with AI
 
-Agente de IA que transforma licitações públicas (PNCP) em oportunidades comerciais
-priorizadas, rodando **100% local** (sem nuvem, sem custo por uso, sem expor dados).
+> Applied AI system that transforms public procurement data into **commercial opportunities, semantic matches and prioritized intelligence** for industrial organizations.
 
-Desenvolvido como prova de conceito de inteligência comercial aplicada à indústria.
+**Portfolio focus:** Applied AI · RAG · Semantic Search · LLMs · LangGraph · Data Intelligence · Decision Support
 
-## O que faz
+---
 
-Monitora editais e contratos públicos de Alagoas e gera um briefing com três frentes:
+## Business problem
 
-1. **Concorrer** — editais que a instituição pode atender diretamente.
-2. **Acompanhar** — editais abertos cujo vencedor será cliente potencial.
-3. **Prospectar** — empresas que já venceram licitações (lead pronto).
+Public procurement creates a large volume of notices, awarded contracts and supplier information. Manually reading these sources makes it difficult to identify, at scale:
 
-## Arquitetura
+- opportunities an organization can directly pursue;
+- awarded suppliers that may become potential clients;
+- procurement categories aligned with an organization's portfolio;
+- companies already active in relevant public contracts.
 
-- **Coleta:** API pública do PNCP (editais abertos + contratos homologados).
-- **Triagem:** classificação em categorias via LLM local + regras de palavra-chave.
-- **Match semântico (RAG):** embeddings (sentence-transformers) buscam candidatos
-  no catálogo de serviços; um LLM local (via LM Studio) decide o mais aderente.
-- **Enriquecimento:** cruzamento de CNPJ do vencedor com base de contatos.
-- **Saída:** briefing HTML com score de prioridade.
+The project explores how **data pipelines + semantic retrieval + local LLM reasoning** can turn this information into a structured commercial intelligence workflow.
 
-## Stack
+## Solution
 
-Python · LangGraph · LM Studio (modelo local) · sentence-transformers · pandas
+The system monitors public procurement information from the **PNCP** and organizes the intelligence into three commercial paths:
 
-## Como rodar
+1. **Compete** — opportunities the organization may be able to serve directly.
+2. **Monitor** — open opportunities where the winning company may become a prospect.
+3. **Prospect** — companies that have already won relevant public contracts.
+
+The final output is a prioritized HTML briefing designed to support human commercial analysis.
+
+## Architecture
+
+```text
+PNCP public data
+      │
+      ▼
+Data collection
+      │
+      ├── Open procurement notices
+      └── Awarded contracts
+      │
+      ▼
+Rule-based + LLM classification
+      │
+      ▼
+Semantic retrieval / RAG
+      │
+      ├── Sentence-transformer embeddings
+      └── Local LLM reasoning via LM Studio
+      │
+      ▼
+CNPJ enrichment
+      │
+      ▼
+Opportunity prioritization
+      │
+      ▼
+Commercial intelligence briefing
+```
+
+### Main components
+
+| Component | Role |
+|---|---|
+| PNCP collector | Retrieves public procurement information |
+| Classification layer | Combines deterministic rules with local LLM classification |
+| Semantic matching | Finds relevant portfolio/services using vector representations |
+| Local LLM | Supports contextual interpretation of retrieved evidence |
+| CNPJ enrichment | Connects procurement winners with company information |
+| Prioritization | Produces a structured commercial opportunity score |
+| HTML briefing | Converts analysis into a usable decision-support artifact |
+
+## Engineering approach
+
+A central design principle is to **separate evidence retrieval from generative reasoning**.
+
+The system does not rely on an LLM to invent opportunities. Structured public data and deterministic rules establish the evidence; semantic retrieval identifies relevant context; the local LLM is then used to interpret that retrieved information.
+
+This architecture makes the pipeline easier to inspect, test and evolve toward production.
+
+## Technology stack
+
+- Python
+- Pandas
+- LangGraph
+- Sentence Transformers
+- Vector / semantic search
+- LM Studio
+- Local LLM inference
+- PNCP public data
+- CNPJ-based enrichment
+- HTML reporting
+
+## Privacy and data governance
+
+The repository contains the **application code and architecture**, not sensitive company or customer databases.
+
+Production implementations should keep confidential datasets, credentials and personal/company contact information outside the public repository.
+
+## How to run
 
 ```bash
 pip install -r requirements.txt
-# subir um modelo local no LM Studio (endpoint OpenAI-compativel em localhost:1234)
+```
+
+Start a local model through LM Studio using an OpenAI-compatible endpoint, then run:
+
+```bash
 python src/radar_completo.py
 ```
 
-## Nota sobre dados
+The exact model and local endpoint can be configured according to the development environment.
 
-Este repositório contém apenas o código. Bases de dados (editais, cadastros de
-empresas) não são versionadas por conterem informação sensível.
+## Why this project matters in a Data & AI portfolio
+
+This project demonstrates a complete applied-AI pattern:
+
+```text
+Public data
+    ↓
+Data engineering
+    ↓
+Information retrieval
+    ↓
+Semantic matching
+    ↓
+LLM reasoning
+    ↓
+Prioritization
+    ↓
+Decision support
+```
+
+The important part is not simply using an LLM. It is designing a system in which **data, retrieval, deterministic logic and AI work together to produce auditable intelligence**.
+
+## Current scope and limitations
+
+This is a portfolio implementation focused on demonstrating the architecture and engineering approach. A production deployment would require additional evaluation of retrieval quality, classification accuracy, data freshness, monitoring, security, model performance and business outcomes.
 
 ---
-*Projeto autoral — inteligência de mercado aplicada à indústria.*
+
+**Author:** Wilton Costa  
+**Focus:** Data Science · Applied AI · Machine Learning · Intelligence & Analytics
