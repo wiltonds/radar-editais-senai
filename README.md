@@ -4,6 +4,9 @@
 
 **Portfolio focus:** Applied AI · RAG · Semantic Search · LLMs · LangGraph · Data Intelligence · Decision Support
 
+![Portfolio architecture](./docs/portfolio-hero.svg)
+
+
 ![Radar de Editais — AI Architecture](./docs/radar-architecture.svg)
 
 ---
