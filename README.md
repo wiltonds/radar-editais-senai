@@ -6,6 +6,19 @@
 
 ![Portfolio architecture](./docs/portfolio-hero.svg)
 
+## Application Demo
+
+![Radar demo](./docs/screenshots/radar-demo.svg)
+
+> **Demo mode:** synthetic/illustrative data is used where production data or infrastructure is not appropriate for a public portfolio.
+
+Run locally:
+
+```bash
+streamlit run demo_app.py
+```
+
+
 
 ![Radar de Editais — AI Architecture](./docs/radar-architecture.svg)
 
