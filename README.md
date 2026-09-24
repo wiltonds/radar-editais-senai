@@ -4,6 +4,8 @@
 
 **Portfolio focus:** Applied AI · RAG · Semantic Search · LLMs · LangGraph · Data Intelligence · Decision Support
 
+![Radar de Editais — AI Architecture](./docs/radar-architecture.svg)
+
 ---
 
 ## Business problem
@@ -28,6 +30,8 @@ The system monitors public procurement information from the **PNCP** and organiz
 The final output is a prioritized HTML briefing designed to support human commercial analysis.
 
 ## Architecture
+
+The architecture above summarizes the main pipeline from public procurement data to decision support.
 
 ```text
 PNCP public data
@@ -138,5 +142,5 @@ This is a portfolio implementation focused on demonstrating the architecture and
 
 ---
 
-**Author:** Wilton Costa  
+**Author:** Wilton Costa    
 **Focus:** Data Science · Applied AI · Machine Learning · Intelligence & Analytics
